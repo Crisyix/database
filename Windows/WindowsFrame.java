@@ -141,7 +141,7 @@ public class WindowsFrame {
 		}
 
 	}
-	public static void ini(String[][] tab)
+	public static void ini(String[][] tab)//初始化信息面板
 	{
 		int j=0;
 		while (j<50)

@@ -10,8 +10,7 @@ public class SqlConnect {
 	private static boolean flag;
 
 	public static Connection SqlCon() {
-		//连接数据库
-		String url = "jdbc:mysql://localhost:3306/lottery?noAccessToProcedureBodies=true";
+		String url = "jdbc:mysql://localhost:3306/lottery?noAccessToProcedureBodies=true";//连接数据库
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
@@ -78,12 +77,12 @@ public class SqlConnect {
 			stmt = SqlCon().createStatement();
 			stmt.executeUpdate(sql);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
 	public static String cheakLucky(){//查看当期开奖 
-		// TODO Auto-generated method stub
+		
 		String sql = "select tno from term where lucky ='blank';";
 		ResultSet set = querySQL(sql);
 		try {
